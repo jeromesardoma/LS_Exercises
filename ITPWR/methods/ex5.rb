@@ -1,6 +1,6 @@
 def scream(words)
   words = words + "!!!!"
-  p words
+  puts words
 end
 
 scream("Yippeee")
