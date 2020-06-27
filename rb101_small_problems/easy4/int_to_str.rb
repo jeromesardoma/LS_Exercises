@@ -27,3 +27,16 @@ def int_to_str_v2(int)
 end
 
 p int_to_str_v2 46543501948
+
+def signed_int_to_str(int)
+  x = if int < 0
+        { sign: '-', value: -int }
+      else
+        { sign: '+', value: int }
+      end
+  "#{x[:sign]}#{int_to_str(x[:value])}"
+end
+
+p signed_int_to_str 53223
+p signed_int_to_str -53223
+
