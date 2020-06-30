@@ -4,14 +4,20 @@ operation = ''
 loop do
   puts "Please enter an integer > 0."
   entry = gets.chomp.to_i
-  # validate entry
+  if entry.is_a?(Integer) == false || entry <= 0 
+    puts "You entered an invalid value, try again."
+    next
+  end
   break
 end
 
 loop do
   puts "Enter 's' to compute the sum, or 'p' to compute the product."
   operation = gets.chomp
-  # validate operation
+  if operation != 's' || operation != 'p'
+    puts "You entered an invalid operation, try again."
+    next
+  end
   break
 end
 
